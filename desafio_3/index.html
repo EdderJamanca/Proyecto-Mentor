@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <title>Frontend Mento | Social links profile</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preload" href="./assets/fonts/Inter-VariableFont_slnt,wght.ttf" as="font" type="font/ttf" crossorigin>
+
+</head>
+<body>
+  <main class="container"
+        aria-busy="true"
+        role="status"
+        aria-live="polite"
+        aria-label="Cargando perfil">
+        <!-- Skeleton Loading State -->
+        <section class="profile-card" id="skeleton-profile">
+            <div class="profile-card__img"
+                 aria-hidden="true">
+                <div class="skeleton skeleton-img"></div>
+            </div>
+            <section class="profile-card__info"
+                     aria-hidden="true">
+                <div class="skeleton skeleton-text title"></div>
+                <div class="skeleton skeleton-text subtitle"></div>
+            </section>
+            <section class="profile-card__description"
+                     aria-hidden="true">
+                <div class="skeleton skeleton-text"></div>
+            </section>
+            <section class="profile-card__buttons"
+                     aria-hidden="true">
+                <div class="skeleton skeleton-button"></div>
+                <div class="skeleton skeleton-button"></div>
+                <div class="skeleton skeleton-button"></div>
+                <div class="skeleton skeleton-button"></div>
+                <div class="skeleton skeleton-button"></div>
+            </section>
+        </section>
+
+        <!-- Actual Content (Hidden initially) -->
+        <section class="profile-card hidden" id="content-profile" aria-hidden="true">
+            <figure class="profile-card__img">
+                <img
+                        src="./assets/images/avatar-jessica.jpeg"
+                        alt="Foto de Jessica Randall"
+                        width="96"
+                        height="96"
+                        decoding="async">
+            </figure>
+            <section class="profile-card__info">
+                <h2 class="text-preset-1">Jessica Randall</h2>
+                <p class="text-preset-2-bold">London, United Kingdom</p>
+            </section>
+            <section class="profile-card__description">
+                <p class="text-preset-2-bold">"Front-end developer and avid reader."</p>
+            </section>
+            <nav class="profile-card__buttons" aria-label="Enlaces a perfiles">
+                <a class="btn btn-grey-700 btn-active text-preset-2-bold" href="https://github.com/usuario" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn btn-grey-700 btn-active text-preset-2-bold" href="https://www.frontendmentor.io/profile/usuario" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>
+                <a class="btn btn-grey-700 btn-active text-preset-2-bold" href="https://www.linkedin.com/in/usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="btn btn-grey-700 btn-active text-preset-2-bold" href="https://twitter.com/usuario" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a class="btn btn-grey-700 btn-active text-preset-2-bold" href="https://instagram.com/usuario" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </nav>
+
+        </section>
+  </main>
+
+
+  <script>
+    // Simulate loading delay and then show content
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.getElementById('skeleton-profile').classList.add('hidden');
+            document.getElementById('content-profile').classList.remove('hidden');
+        }, 2000); // Show content after 2 seconds
+    });
+
+    // Function to reload the page and show skeleton again
+    function reloadPage() {
+        location.reload();
+    }
+  </script>
+</body>
+</html>
