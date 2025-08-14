@@ -12,11 +12,8 @@
 </head>
 <body>
   <main class="container"
-        aria-busy="true"
-        role="status"
-        aria-live="polite"
         aria-label="Cargando perfil">
-        <!-- Skeleton Loading State -->
+
         <section class="profile-card" id="skeleton-profile">
             <div class="profile-card__img"
                  aria-hidden="true">
@@ -71,7 +68,7 @@
 
 
   <script>
-    // Simulate loading delay and then show content
+
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             document.getElementById('skeleton-profile').classList.add('hidden');
@@ -79,7 +76,6 @@
         }, 2000); // Show content after 2 seconds
     });
 
-    // Function to reload the page and show skeleton again
     function reloadPage() {
         location.reload();
     }
