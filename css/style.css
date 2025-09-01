@@ -1,0 +1,313 @@
+:root {
+    /* Colors */
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    /* Typography */
+    --font-body: "Outfit", sans-serif;
+    --font-heading: "Young Serif", serif;
+
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --spacing-128: 128px;
+    --spacing-48: 48px;
+    --spacing-40: 40px;
+    --spacing-32: 32px;
+    --spacing-24: 24px;
+    --spacing-16: 16px;
+    --spacing-12: 12px;
+    --spacing-8: 8px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: var(--stone-100);
+    color: var(--stone-600);
+}
+.fw-bold {
+    font-weight: var(--fw-bold) !important;
+}
+.fw-semibold {
+    font-weight: var(--fw-semibold) !important;
+}
+.fw-regular {
+    font-weight: var(--fw-regular) !important;
+}
+.color-white {
+    color: var(--white);
+}
+.color-stone-100 {
+    color: var(--stone-100);
+}
+.color-stone-150 {
+    color: var(--stone-150);
+}
+.color-stone-600 {
+    color: var(--stone-600);
+}
+.mt-24 {
+    margin-top: var(--spacing-24);
+}
+.mb-24 {
+    margin-bottom: var(--spacing-24);
+}
+.mb-16 {
+    margin-bottom: var(--spacing-16);
+}
+.mb-12 {
+    margin-bottom: var(--spacing-12);
+}
+.mb-8 {
+    margin-bottom: var(--spacing-8);
+}
+.mb-40 {
+    margin-bottom: var(--spacing-40);
+}
+.color-stone-900 {
+    color: var(--stone-900);
+}
+.color-brown-800 {
+    color: var(--brown-800);
+}
+.color-rose-800 {
+    color: var(--rose-800);
+}
+.color-rose-50 {
+    color: var(--rose-50);
+}
+.text-Preset-1 {
+    font-family:"Young Serif", serif;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-weight: var(--fw-regular);
+}
+@media (min-width: 375px) {
+    .text-Preset-1 {
+        font-size: 36px;
+    }
+}
+@media (min-width: 768px) {
+    .text-Preset-1 {
+        font-size: 48px;
+    }
+}
+.text-Preset-2 {
+    font-family:"Young Serif", serif, "Regular";
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-weight: var(--fw-regular);
+}
+.text-Preset-3 {
+    font-family:"Outfit", sans-serif;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-weight: var(--fw-semibold);
+}
+.text-Preset-4 {
+    font-family:"Outfit", sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    font-weight: var(--fw-regular);
+}
+.text-preset-4-bold {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0;
+    font-weight: var(--fw-bold); /* Bold */
+}
+
+.container {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0;
+}
+@media (min-width: 375px) {
+    .container {
+        padding: 0px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        padding: var(--spacing-128) var(--spacing-48);
+    }
+}
+@media (min-width: 1440px) {
+    .container {
+        padding: var(--spacing-128) 0px;
+    }
+}
+
+.card {
+    inline-size: 100%;
+    max-inline-size: 736px;
+    padding: 0;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+@media (min-width: 375px) {
+    .card {
+        padding: 0px;
+    }
+}
+@media (min-width: 768px) {
+    .card {
+        padding: var(--spacing-40);
+    }
+}
+@media (min-width: 1440px) {
+    .card {
+        padding: var(--spacing-40);
+    }
+}
+.card-header {
+    margin-bottom: 0;
+}
+@media (min-width: 768px) {
+    .card-header {
+        margin-bottom: var(--spacing-40);
+    }
+}
+@media (min-width: 1440px) {
+    .card-header {
+        margin-bottom: var(--spacing-40);
+    }
+}
+.card-header-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-16);
+}
+img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32);
+    padding: var(--spacing-40) var(--spacing-32);
+}
+@media (min-width: 768px) {
+    .card-body {
+        gap: var(--spacing-32);
+    }
+}
+@media (min-width: 1440px) {
+    .card-body {
+        gap: var(--spacing-32);
+    }
+}
+.preparation-time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-16);
+    padding: var(--spacing-32);
+    background-color: var(--rose-50);
+}
+.preparation-time-title {
+    color: var(--rose-800);
+}
+.preparation-time-list {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+}
+.ingredients, .instructions , .nutrition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-24);
+}
+
+.ingredients,  .nutrition ul,
+.ingredients, .nutrition ol {
+    list-style-position: inside;
+}
+.ingredients, .instructions , .nutrition ul li,
+.ingredients, .instructions , .nutrition ol li {
+    padding: 8px;
+}
+.ingredients ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+    width: 100%;
+}
+.instructions ol {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+    width: 100%;
+    margin-left: 1rem;
+
+}
+.instructions ol li::marker {
+    margin-right: 10rem;
+    color: var(--brown-800);
+    font-weight: var(--fw-bold);
+}
+.instructions ol li strong:after {
+    content: ":";
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.nutrition tbody tr {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+.nutrition tbody tr:last-child {
+    border-bottom: none;
+}
+
+.nutrition td {
+    padding-block: var(--spacing-12);
+    padding-inline: var(--spacing-24);
+    vertical-align: middle;
+}
+
+.nutrition td:first-child {
+    color: var(--stone-600);
+    width: 50%;
+}
+
+.nutrition td:last-child {
+    color: var(--brown-800);
+    font-weight: var(--fw-bold);
+    width: 50%;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0);
+    white-space: nowrap; border: 0;
+}
+
