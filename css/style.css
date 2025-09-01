@@ -95,6 +95,9 @@ body {
     letter-spacing: 0;
     font-weight: var(--fw-regular);
 }
+h1 {
+    margin: 0;
+}
 @media (min-width: 375px) {
     .text-Preset-1 {
         font-size: 36px;
