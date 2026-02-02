@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/normalize.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
@@ -22,13 +24,86 @@
   </style>
 </head>
 <body class="container">
- <div class="testimonials-card">
+  <!-- Skeleton loading grid -->
+  <div id="skeleton" class="skeleton-grid">
+    <section class="skeleton-card s1">
+      <div class="skeleton-header">
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-header-text">
+          <div class="skeleton-text w-80"></div>
+          <div class="skeleton-text w-50"></div>
+        </div>
+      </div>
+      <div class="skeleton-text w-100 h-16"></div>
+      <div class="skeleton-text w-90"></div>
+      <div class="skeleton-text w-95"></div>
+      <div class="skeleton-text w-70"></div>
+    </section>
+
+    <section class="skeleton-card s2">
+      <div class="skeleton-header">
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-header-text">
+          <div class="skeleton-text w-70"></div>
+          <div class="skeleton-text w-40"></div>
+        </div>
+      </div>
+      <div class="skeleton-text w-85 h-16"></div>
+      <div class="skeleton-text w-75"></div>
+      <div class="skeleton-text w-65"></div>
+    </section>
+
+    <section class="skeleton-card s4">
+      <div class="skeleton-header">
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-header-text">
+          <div class="skeleton-text w-60"></div>
+          <div class="skeleton-text w-40"></div>
+        </div>
+      </div>
+      <div class="skeleton-text w-80 h-16"></div>
+      <div class="skeleton-text w-95"></div>
+      <div class="skeleton-text w-70"></div>
+    </section>
+
+    <section class="skeleton-card s5">
+      <div class="skeleton-header">
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-header-text">
+          <div class="skeleton-text w-80"></div>
+          <div class="skeleton-text w-50"></div>
+        </div>
+      </div>
+      <div class="skeleton-text w-90 h-16"></div>
+      <div class="skeleton-text w-95"></div>
+      <div class="skeleton-text w-85"></div>
+      <div class="skeleton-text w-70"></div>
+    </section>
+
+    <section class="skeleton-card s3">
+      <div class="skeleton-header">
+        <div class="skeleton-avatar"></div>
+        <div class="skeleton-header-text">
+          <div class="skeleton-text w-70"></div>
+          <div class="skeleton-text w-40"></div>
+        </div>
+      </div>
+      <div class="skeleton-text w-95 h-16"></div>
+      <div class="skeleton-text w-90"></div>
+      <div class="skeleton-text w-85"></div>
+      <div class="skeleton-text w-60"></div>
+    </section>
+  </div>
+  <noscript><style>#real-content{display:block!important} #skeleton{display:none!important}</style></noscript>
+
+  <!-- Real content -->
+  <div id="real-content" class="testimonials-card hidden">
 
   <section class="testimonial-1 card">
     <div class="d-flex vertical-align-center">
       <!--logo--->
       <div class="card-logo">
-        <img src="./images/image-daniel.jpg" alt="image-daniel">
+        <img src="./images/image-daniel.jpg" alt="Foto de perfil de daniel">
       </div>
       <p class="px-4">
         Daniel Clifford
@@ -50,7 +125,7 @@
   <section class="testimonial-2 card">
     <div class="d-flex vertical-align-center">
       <div class="card-logo">
-        <img src="./images/image-jonathan.jpg" alt="image-jonathan">
+        <img src="./images/image-jonathan.jpg" alt="Foto de perfil de jonathan">
       </div>
       <p class="px-4">
         Jonathan Walters
@@ -69,7 +144,7 @@
   <section class="testimonial-4 card">
     <div class="d-flex vertical-align-center">
       <div class="card-logo">
-        <img src="./images/image-jeanette.jpg" alt="image-jeanette">
+        <img src="./images/image-jeanette.jpg" alt="Foto de perfil de jeanette">
       </div>
       <p class="px-4">
         Jeanette Harmon
@@ -87,7 +162,7 @@
   <section class="testimonial-5 card">
     <div class="d-flex vertical-align-center">
       <div class="card-logo">
-        <img src="./images/image-patrick.jpg" alt="image-patrick">
+        <img src="./images/image-patrick.jpg" alt="Foto de perfil de patrick">
       </div>
       <p class="px-4">
         Patrick Abrams
@@ -110,7 +185,7 @@
    <section class="testimonial-3 card">
      <div class="d-flex vertical-align-center">
        <div class="card-logo">
-         <img src="./images/image-kira.jpg" alt="image-kira">
+         <img src="./images/image-kira.jpg" alt="Foto de perfil de kira">
        </div>
        <p class="px-4">
          Kira Whittle
@@ -136,5 +211,16 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Edder Jamanca</a>.
   </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      // Simula carga y cambia del esqueleto al contenido real en 2s
+      setTimeout(function () {
+        var skeleton = document.getElementById('skeleton');
+        var real = document.getElementById('real-content');
+        if (skeleton) skeleton.classList.add('hidden');
+        if (real) real.classList.remove('hidden');
+      }, 2000);
+    });
+  </script>
 </body>
 </html>
