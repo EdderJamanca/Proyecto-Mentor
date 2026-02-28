@@ -18,7 +18,7 @@
     <img src="starter-code/assets/logo.svg" alt="logo del meet">
   </div>
 </nav>
-<section class="hero">
+<section class="hero" aria-label="Hero estatico">
   <div class="hero-desktop">
      <div class="hero-img-left">
           <img src="starter-code/assets/desktop/image-hero-left.png" alt="imagen hero left">
@@ -31,8 +31,10 @@
               device
               .</p>
             <div class="hero-buttons">
-              <button class="hero-btn hero-button-primary"> Download v1.3</button>
-              <button class="hero-btn hero-button-secondary">What is it?</button>
+              <button class="hero-btn hero-button-primary" aria-label="Descargar Meet aplicación versión 1.3"
+              > Download v1.3</button>
+              <button class="hero-btn hero-button-secondary" aria-label="Conocer más sobre Meet aplicación"
+              >What is it?</button>
             </div>
           </div>
       </div>
@@ -40,7 +42,7 @@
           <img src="starter-code/assets/desktop/image-hero-right.png" alt="imagen hero right">
     </div>
   </div>
-    <div class="hero-table">
+    <div class="hero-table" aria-label="Hero estatico tablet y movil">
         <div class="hero-table-content">
             <div class="hero-img-table">
                 <img src="starter-code/assets/tablet/image-hero.png" alt="imagen hero table">
@@ -53,8 +55,9 @@
                         device
                         .</p>
                     <div class="hero-buttons">
-                        <button class="hero-btn hero-button-primary"> Download v1.3</button>
-                        <button class="hero-btn hero-button-secondary">What is it?</button>
+                        <button class="hero-btn hero-button-primary" aria-label="Descargar Meet aplicación versión 1.3"> Download v1.3</button>
+                        <button class="hero-btn hero-button-secondary" aria-label="Conocer más sobre Meet aplicación"
+                        >What is it?</button>
                     </div>
                 </div>
             </div>
@@ -62,8 +65,7 @@
     </div>
 </section>
 
-
-<main>
+<main role="main" aria-label="Main content">
     <div class="item-number">
         <div class="item-separdo"></div>
         <div class="item-circle">01</div>
@@ -101,7 +103,8 @@
 
 </main>
 
-<footer>
+<footer role="contentinfo"
+ aria-label="Footer section">
     <div class="item-number position-relative top-18 index-1">
         <div class="item-separdo"></div>
         <div class="item-circle bg-white">02</div>
@@ -117,7 +120,9 @@
         </div>
         <div class="footer-text-action">
             <div class="footer-btn-primary">
-                <button class="hero-btn hero-button-secondary"> Download v1.3</button>
+                <button class="hero-btn hero-button-secondary"
+                        aria-label="Descargar Meet aplicación versión 1.3"
+                > Download v1.3</button>
             </div>
         </div>
     </div>
