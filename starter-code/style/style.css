@@ -80,6 +80,8 @@ body{
 .hero-title{
     font-size: var(--text-present-1);
     text-align: center;
+    font-weight: 900;
+    line-height: 110%;
     @media (max-width: 768px) {
         font-size: var(--text-present-2);
     }
@@ -104,6 +106,7 @@ body{
     border-radius: 16px;
     border: none;
     cursor: pointer;
+    font-weight: 600;
 }
 .hero-btn:active,
 .hero-btn:focus,
@@ -248,7 +251,7 @@ main{
 }
 .text-primary {
     color: var(--color-primary-100);
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1rem;
     text-transform: uppercase;
     @media (max-width: 375px) {
@@ -258,7 +261,7 @@ main{
 .text-title {
     font-size: 2.2rem;
     text-align: center;
-    font-weight: bold;
+    font-weight: 900;
     @media (max-width: 768px) {
         font-size: 1.8rem;
     }
